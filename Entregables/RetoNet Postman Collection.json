@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "510f15a0-bda4-41f6-a7a9-57d7445f1227",
+		"name": "RetoNet Postman Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19019112"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "1. Client Creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificacionPersona\": 1033763576,\r\n  \"estadoCliente\": true,\r\n  \"contraseña\": \"123456\",\r\n  \"identificacionPersonaNavigation\": {\r\n    \"identificacion\": 1033763576,\r\n    \"idGenero\": 1,\r\n    \"edad\": 30,\r\n    \"nombre\": \"Carlos J\",\r\n    \"direccion\": \"Calle Falsa 123\",\r\n    \"telefono\": \"3113246598\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Client Modification",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificacionPersona\": 1033763576,\r\n  \"estadoCliente\": false,\r\n  \"contraseña\": \"123453789\",\r\n   \"identificacionPersonaNavigation\": {\r\n    \"identificacion\": 1033763576,\r\n    \"idGenero\": 1,\r\n    \"edad\": 30,\r\n    \"nombre\": \"Carlos J\",\r\n    \"direccion\": \"Calle Falsa 123454789\",\r\n    \"telefono\": \"3113246598\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Client Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/clientes/1033763576",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"clientes",
+								"1033763576"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. Client Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/clientes/1033763576",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"clientes",
+								"1033763576"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "1. Account Creation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificacionPersona\": 1033763576,\r\n  \"numeroCuenta\": 1234567890,\r\n  \"idTipoCuenta\": 1,\r\n  \"estadoCuenta\": true,\r\n  \"saldo\": \"1000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/cuentas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Account Modification",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificacionPersona\": 1033763576,\r\n  \"numeroCuenta\": 1234567890,\r\n  \"idTipoCuenta\": 1,\r\n  \"estadoCuenta\": true,\r\n  \"saldo\": 1000000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/cuentas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Account Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"identificacion\": 1033763576,\r\n\"idGenero\": 1,\r\n\"edad\": 28,\r\n\"nombre\": \"Jose Lema\",\r\n\"direccion\": \"Otavalo sn y principal Modified\",\r\n\"telefono\": \"098254785\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/cuentas/1033763576/1234567890",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"cuentas",
+								"1033763576",
+								"1234567890"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. Account Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/cuentas/1033763576/1234567890",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"cuentas",
+								"1033763576",
+								"1234567890"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "1. Apply Movement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identificacionPersona\": 0,\r\n  \"estadoCliente\": true,\r\n  \"contraseña\": \"string\",\r\n  \"identificacionPersonaNavigation\": {\r\n    \"identificacion\": 0,\r\n    \"idGenero\": 1,\r\n    \"edad\": 0,\r\n    \"nombre\": \"string\",\r\n    \"direccion\": \"string\",\r\n    \"telefono\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/movimientos/aplicarMovimiento?valor=10000&identificacion=1033763576&numeroCuenta=1234567890&tipoMovimiento=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"movimientos",
+								"aplicarMovimiento"
+							],
+							"query": [
+								{
+									"key": "valor",
+									"value": "10000"
+								},
+								{
+									"key": "identificacion",
+									"value": "1033763576"
+								},
+								{
+									"key": "numeroCuenta",
+									"value": "1234567890"
+								},
+								{
+									"key": "tipoMovimiento",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Movements Report",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"identificacion\": 1033763576,\r\n\"idGenero\": 1,\r\n\"edad\": 28,\r\n\"nombre\": \"Jose Lema\",\r\n\"direccion\": \"Otavalo sn y principal Modified\",\r\n\"telefono\": \"098254785\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/TpPersonas?id=1033763576",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"TpPersonas"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1033763576"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
